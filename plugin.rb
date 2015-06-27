@@ -1,17 +1,14 @@
-# name: top posters
-# about: Plugin for Discourse showing users ranked by number of posts over week
+# name: Zona Radical integration
+# about: Plugin for Discourse for integrating with Zona Radical Rails app
 # version: 0.1
-# authors: Alexey Glukhov (pineapplethief)
-# url: insert url later
+# authors: Alexey Glukhov
+# url: https://github.com/pineapplethief/zr-discourse-integration
 
 enabled_site_setting :zr_integration_enabled
 
 register_asset 'stylesheets/common/zr_integration.scss'
 register_asset 'stylesheets/desktop/zr_integration.scss', :desktop
 register_asset 'stylesheets/mobile/zr_integration.scss', :mobile
-
-#register_asset 'javascripts/discourse/templates/discovery.hbs', :server_side
-#register_asset 'javascripts/discourse/templates/components/top-posters.hbs', :server_side
 
 PLUGIN_NAME ||= "zr_integration".freeze
 
@@ -23,15 +20,6 @@ after_initialize do
       isolate_namespace ZrIntegration
     end
   end
-
-
-  #require_dependency 'basic_user_serializer'
-  #class DiscourseTopPosters::TopPosterUserSerializer < BasicUserSerializer
-  #  attributes :posts_count
-  #end
-
-  #require_dependency 'application_controller'
-
 
   Discourse::Application.routes.append do
     mount ::ZrIntegration::Engine, at: '/zr_integration'

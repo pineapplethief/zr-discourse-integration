@@ -3,3 +3,5 @@ plugins:
     default: true
   zona_radical_url:
     default: http://zonaradical.com.br/
+  zr_api_key:
+    default: change_to_proper_api_key!

@@ -4,3 +4,4 @@ en:
   site_settings:
     zr_integration_enabled: 'Enable Zona Radical integration'
     zona_radical_url: 'Zona Radical domain url'
+    zr_api_key: 'API key from Zona Radical secrets.yml file to access integration API'
