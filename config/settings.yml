@@ -1,0 +1,5 @@
+plugins:
+  zr_integration_enabled:
+    default: true
+  zona_radical_url:
+    default: http://zonaradical.com.br/
